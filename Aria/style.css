@@ -630,18 +630,18 @@ span {
   /* border: 1px solid black; */
   text-align: center;
 }
-.cards .first {
+.cards .firstc {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
 }
-.first img:hover{
+.firstc img:hover{
   transform: scale(1.1);
     transition: 0.3s ease;
     cursor: pointer;
 }
-.cards .first p {
+.cards .firstc p {
   color: #838280;
   padding-top: 2rem;
 }
