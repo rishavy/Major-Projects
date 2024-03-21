@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+      href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="icon" href="./assest/pokeball-pokemon-svgrepo-com.svg">    
+    <link rel="stylesheet" href="./style.css">
+    <title>GeeksterPok</title>
+</head>
+<body>
+    
+      <h1 class="animate__animated animate__backInDown">
+          <img src="./assest/8fCz.gif">
+          <img class="logo" src="./assest/Pokemon-Logo.png">
+          <img src="./assest/5SvD.gif">
+      </h1>
+      <div class="functions">
+        <form action="" id="searchForm">
+          <input
+            type="text"
+            name=""
+            id="searchBar"
+            placeholder="Search by pokemon name"
+            class="animate__animated animate__backInLeft"
+          />
+        </form>
+        <form action="" id="filterForm">
+          <div class="filterContainer">
+            <select
+              name=""
+              id="filterOption"
+              class="animate__animated animate__fadeInBottomLeft"
+            >
+              <option value="" selected disabled>Select Type</option>
+            </select>
+            <button
+              id="filterButton"
+              class="animate__animated animate__fadeInBottomLeft"
+            >
+              Filter By Type
+            </button>
+          
+          <button
+            onclick="resetBtn(event)"
+            class="animate__animated animate__fadeInBottomRight"
+          >
+            Reset
+          </button>
+        </div>
+          
+        </form>
+      </div>
+      <div id="pokemon-container"></div>
+      <dialog id="myDialog">
+        <div class="modal"></div>
+      </dialog>
+      <a href="#" id="top"
+        ><i class="fa-solid fa-chevron-up" style="color: #000000"></i></a>
+
+
+
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+      <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(to right bottom, #80e1ff 0%, #8bff9e 100%);
+  transition: all 0.8s;
+}
+#top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #0077ff;
+  box-shadow: -2px -2px 5px 2px #00000080;
+  text-decoration: none;
+  color: white;
+  display: none;
+  transition: all 1s;
+  z-index: 1000;
+}
+.fa-chevron-up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #0077ff #d4d4d4;
+}
+body::-webkit-scrollbar {
+  width: 14px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #d4d4d4;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0077ff;
+  height: 100px;
+  border-radius: 10px;
+  border: 3px solid #d4d4d4;
+}
+
+h4 {
+  margin-top: 1rem;
+  font-size: 0.6rem;
+  color: rgb(46, 29, 8);
+  font-weight: 500;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+h4 span a {
+  color: #ff0000;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transform: scale(1);
+  transition: all 0.6s ease-in-out;
+}
+span a:hover {
+  font-size: 2rem;
+  transform: scale(1.2);
+}
+
+h1 {
+  width: 100%;
+  /* border: 1px solid red; */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+h1 > img {
+  padding: 0;
+  margin: 0;
+  height: 150px;
+  width: 180px;
+}
+.logo {
+  height: 180px;
+  width: 400px;
+}
+
+.functions {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+form {
+  width: 100%;
+  display: flex;
+  /* border: 2px solid red; */
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+#filterForm {
+  /* border: 1px solid black; */
+  justify-content: space-around;
+  gap: 1rem;
+}
+#searchForm {
+  justify-content: center;
+}
+#searchForm input {
+  width: 150px;
+  padding: 10px;
+  width: 100%;
+  border: 1px dotted gray;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 5px 5px 0 #000000b3;
+  transition: 0.3s;
+  background-color: antiquewhite;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.8s;
+}
+
+#searchForm input::placeholder {
+  font-size: 1rem;
+  text-transform: capitalize;
+  transition: all 0.8s;
+}
+
+.filterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+#filterOption {
+  width: 200px;
+  padding: 14px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  appearance: none;
+  text-align: center;
+  outline: none;
+  border: 1px dotted gray;
+  box-shadow: 0 5px 5px 0 #000000b3;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  transition: all 0.8s;
+  cursor: pointer;
+}
+#filterOption:hover {
+  background-color: #54b0fc;
+}
+
+#filterOption:focus {
+  border-radius: 10px 10px 0 0;
+}
+option {
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+option:checked {
+  background-color: #4d4d4d;
+}
+button {
+  appearance: button;
+  background-color: #faf3d7;
+  background-image: none;
+  border: 1px solid #fad1d1;
+  border-radius: 10px;
+  box-shadow: #505050 4px 4px 0 0, #1b1919 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #050505;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 10px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: all 0.8s;
+}
+
+button:focus {
+  text-decoration: none;
+}
+
+button:hover {
+  text-decoration: none;
+  background-color: #54b0fc;
+}
+
+button:active {
+  box-shadow: #00000020 0 3px 5px inset;
+  outline: 0;
+}
+
+button:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+/* ---------------------------------- */
+
+@media (min-width: 768px) {
+  button {
+    padding: 12px 50px;
+  }
+}
+#pokemon-container {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+}
+.box {
+  position: relative;
+  width: 220px;
+  height: 280px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.box-content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.box:hover .box-content {
+  transform: rotateY(180deg);
+}
+.box-front,
+.box-back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px #31313180;
+}
+
+.box-back {
+  transform: rotateY(180deg);
+  position: relative;
+}
+.pokeName {
+  font-size: 1.3rem;
+  color: #000000;
+  margin-bottom: 0.8rem;
+}
+.pokeType {
+  background-color: #000000;
+  color: aliceblue;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 3px;
+  width: 100px;
+  text-align: center;
+  border-radius: 5px;
+  transition: all 0.8s;
+}
+
+p {
+  width: 100%;
+  font-size: 0.8rem;
+  text-align: center;
+  background-color: beige;
+  color: rgb(82, 80, 80);
+  transition: all 0.8s;
+}
+
+.pokeBackId {
+  position: absolute;
+  top: -30px;
+  border-radius: 10px 10px 0 0;
+}
+.pokeBackImg {
+  margin-top: -2rem;
+  width: 200px;
+  height: 120px;
+}
+.pokeAbility {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: bold;
+}
+.pokeAbility span {
+  font-size: 0.9rem;
+  color: #000;
+}
+#myDialog {
+  pointer-events: none;
+  position: fixed;
+  display: grid;
+  height: 100vh;
+  max-height: none;
+  width: 100%;
+  max-width: none;
+  justify-items: center;
+  opacity: 0;
+  overscroll-behavior: contain;
+  z-index: 999;
+  background-color: transparent;
+  color: inherit;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-property: transform, opacity, visibility;
+  overflow-y: hidden;
+  place-items: center;
+  border: none;
+  background-color: #00000066;
+}
+#myDialog[open] {
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+}
+#myDialog,
+::backdrop {
+  overscroll-behavior: contain;
+}
+.modal {
+  background-color: #5fdfff;
+  width: 100%;
+  max-width: 400px;
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 5px #00000066;
+  position: relative;
+  transition: all 0.8s;
+}
+
+.model_Name {
+  font-size: 1.8rem;
+}
+.model_Image {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 1rem;
+  transform-style: preserve-3d;
+  transition: all 0.6s;
+  perspective: 1000px;
+}
+.model_Image:hover {
+  transform: scale(1.2) rotateY(20deg);
+}
+.modal_Moves {
+  text-decoration: solid;
+  color: #5e2f2f;
+  margin-bottom: 1rem;
+  transition: all 0.8s;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: decimal;
+  list-style-image: url("./assestt/pokeball-pokemon-svgrepo-com.svg");
+  list-style-position: inside;
+  margin-bottom: 1rem;
+  transition: all 0.8s;
+}
+
+li {
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+  transition: all 0.8s;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+.specs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.specs h4 {
+  font-size: 14px;
+  color: #1900ff;
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 475px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+}
